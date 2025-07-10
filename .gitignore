@@ -1,0 +1,18 @@
+.DS_Store
+NuGet
+configstore
+fish
+flutter
+github-copilot
+iterm2
+kweeb-logger
+rstudio
+stetic
+uv
+xbuild
+colors.sh
+icons.sh
+Microsoft\\VisualStudio Services/
+karabiner
+btop
+raycast

@@ -1,0 +1,103 @@
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"Setting","setting":"theme","value":"One Dark"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"Setting","setting":"keymap","value":"VSCode"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"App","operation":"first open"}
+{"signed_in":false,"milliseconds_since_first_event":0,"type":"App","operation":"welcome page: change theme"}
+{"signed_in":false,"milliseconds_since_first_event":5236,"type":"App","operation":"welcome page: change keymap"}
+{"signed_in":false,"milliseconds_since_first_event":6139,"type":"Setting","setting":"keymap","value":"VSCode"}
+{"signed_in":false,"milliseconds_since_first_event":7468,"type":"App","operation":"welcome page: install cli"}
+{"signed_in":false,"milliseconds_since_first_event":10018,"type":"App","operation":"welcome page: install cli"}
+{"signed_in":false,"milliseconds_since_first_event":11236,"type":"App","operation":"welcome page: install cli"}
+{"signed_in":false,"milliseconds_since_first_event":11382,"type":"App","operation":"welcome page: install cli"}
+{"signed_in":false,"milliseconds_since_first_event":11517,"type":"App","operation":"welcome page: install cli"}
+{"signed_in":false,"milliseconds_since_first_event":12291,"type":"App","operation":"welcome page: sign in to copilot"}
+{"signed_in":false,"milliseconds_since_first_event":61606,"type":"App","operation":"welcome page: sign in to copilot"}
+{"signed_in":false,"milliseconds_since_first_event":121330,"type":"App","operation":"welcome page: install cli"}
+{"signed_in":false,"milliseconds_since_first_event":122140,"type":"App","operation":"welcome page: install cli"}
+{"signed_in":false,"milliseconds_since_first_event":127145,"type":"App","operation":"extensions page: open"}
+{"signed_in":false,"milliseconds_since_first_event":133952,"type":"App","operation":"extensions: install extension"}
+{"signed_in":false,"milliseconds_since_first_event":138522,"type":"App","operation":"welcome page: change theme"}
+{"signed_in":false,"milliseconds_since_first_event":139850,"type":"Setting","setting":"theme","value":"Vesper"}
+{"signed_in":true,"milliseconds_since_first_event":156044,"type":"Editor","operation":"open","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":165754,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":166397,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":168022,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":168620,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":168730,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":174636,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":176297,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":176783,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":176940,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":179409,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":181435,"type":"Editor","operation":"open","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":184109,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":215726,"type":"Edit","duration":18999,"environment":"editor"}
+{"signed_in":true,"milliseconds_since_first_event":220155,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":220287,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":220508,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":221246,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":222518,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":222651,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":223004,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":224278,"type":"Memory","memory_in_bytes":130809856,"virtual_memory_in_bytes":517160960000}
+{"signed_in":true,"milliseconds_since_first_event":224278,"type":"Cpu","usage_as_percentage":11.166009,"core_count":10}
+{"signed_in":true,"milliseconds_since_first_event":230783,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":231602,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":231729,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":233014,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":233778,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":235091,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":238757,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":238883,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":239476,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":239696,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":240283,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":0,"type":"Copilot","suggestion_id":"e7a39e71-92a1-4809-bde9-018c55de6baf","suggestion_accepted":true,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":2622,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":2763,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":4162,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":11996,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":12999,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":28686,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":30053,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":30177,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":32653,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":34012,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":34259,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":36274,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":37301,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":39259,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":39376,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":39502,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":39592,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":69459,"type":"Edit","duration":66926,"environment":"editor"}
+{"signed_in":true,"milliseconds_since_first_event":70840,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":73650,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":73788,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":74283,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":76005,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":77595,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":85477,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":150783,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":151992,"type":"Edit","duration":21522,"environment":"editor"}
+{"signed_in":true,"milliseconds_since_first_event":154012,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":155340,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":157428,"type":"Copilot","suggestion_id":"c76ace1f-42d0-464b-a9c9-811b3e40ec15","suggestion_accepted":true,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":160763,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":163743,"type":"Copilot","suggestion_id":null,"suggestion_accepted":false,"file_extension":"json"}
+{"signed_in":true,"milliseconds_since_first_event":170979,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":173398,"type":"App","operation":"open project"}
+{"signed_in":true,"milliseconds_since_first_event":191723,"type":"App","operation":"welcome page: close"}
+{"signed_in":true,"milliseconds_since_first_event":211954,"type":"Editor","operation":"open","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":216983,"type":"Edit","duration":18989,"environment":"editor"}
+{"signed_in":true,"milliseconds_since_first_event":218048,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":220784,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":221228,"type":"Memory","memory_in_bytes":161529856,"virtual_memory_in_bytes":499988267008}
+{"signed_in":true,"milliseconds_since_first_event":221228,"type":"Cpu","usage_as_percentage":12.663424,"core_count":10}
+{"signed_in":true,"milliseconds_since_first_event":223326,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":225247,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":226272,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":228550,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":234270,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":236360,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":238441,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
+{"signed_in":true,"milliseconds_since_first_event":240575,"type":"Editor","operation":"save","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true}
