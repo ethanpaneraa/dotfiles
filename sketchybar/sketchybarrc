@@ -1,191 +1,91 @@
-#!/bin/bash
+# This is a demo config to showcase some of the most important commands.
+# It is meant to be changed and configured, as it is intentionally kept sparse.
+# For a (much) more advanced configuration example see my dotfiles:
+# https://github.com/FelixKratz/dotfiles
 
-# A simple sketchybar config for aerospace users with multi-monitor support
 PLUGIN_DIR="$CONFIG_DIR/plugins"
-source "$PLUGIN_DIR/colors.sh"
-source "$HOME/.config/icons.sh"
 
 ##### Bar Appearance #####
-sketchybar --bar position=top height=38 color=$TRANSPARENT
+# Configuring the general appearance of the bar.
+# These are only some of the options available. For all options see:
+# https://felixkratz.github.io/SketchyBar/config/bar
+# If you are looking for other colors, see the color picker:
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+
+sketchybar --bar position=top height=40 blur_radius=30 color=0x40000000
 
 ##### Changing Defaults #####
+# We now change some default values, which are applied to all further items.
+# For a full list of all available item properties see:
+# https://felixkratz.github.io/SketchyBar/config/items
+
 default=(
-  padding_left=8
-  padding_right=4
-  background.border_width=2
-  background.height=35
-  background.corner_radius=12
+  padding_left=5
+  padding_right=5
   icon.font="Hack Nerd Font:Bold:17.0"
-  label.font="SF Pro:Semibold:17.0"
-  icon.color=$TEXT_GREY
-  label.color=$TEXT_GREY
+  label.font="Hack Nerd Font:Bold:14.0"
+  icon.color=0xffffffff
+  label.color=0xffffffff
   icon.padding_left=4
   icon.padding_right=4
   label.padding_left=4
   label.padding_right=4
-  updates=on
-  y_offset=0
 )
 sketchybar --default "${default[@]}"
 
-##### Adding aerospace layouts #####
-# Add events
-sketchybar --add event aerospace_workspace_change
-sketchybar --add event window_change
-sketchybar --add event window_focus
-sketchybar --add event title_change
+##### Adding Mission Control Space Indicators #####
+# Let's add some mission control spaces:
+# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
+# to indicate active and available mission control spaces.
 
-# Clear any existing workspace items to avoid duplicates
-sketchybar --remove '/space\..*/'
-
-# Add left and right padding
-sketchybar --add item spacePaddingLeft left
-sketchybar --set spacePaddingLeft padding_left=10 background.drawing=off icon.drawing=off label.drawing=off
-
-sketchybar --add item spacePaddingRight left
-sketchybar --set spacePaddingRight padding_right=10 background.drawing=off icon.drawing=off label.drawing=off
-
-# Define workspaces - use a hardcoded list for reliability
-WORKSPACES="1 2 3 4 5 6 7 8 9 10"
-
-# Add workspace items
-for sid in $WORKSPACES; do
-  sketchybar --add item space.$sid left \
-    --set space.$sid \
-    drawing=on \
-    background.corner_radius=5 \
-    background.drawing=on \
-    background.border_width=1 \
-    background.height=23 \
-    background.padding_right=5 \
-    background.padding_left=5 \
-    icon="$sid" \
-    icon.shadow.drawing=off \
-    icon.padding_left=10 \
-    label.font="sketchybar-app-font:Regular:16.0" \
-    label.padding_right=20 \
-    label.padding_left=0 \
-    label.y_offset=-1 \
-    label.shadow.drawing=off \
-    click_script="aerospace workspace $sid" \
-    --subscribe space.$sid aerospace_workspace_change window_change window_focus
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+for i in "${!SPACE_ICONS[@]}"
+do
+  sid="$(($i+1))"
+  space=(
+    space="$sid"
+    icon="${SPACE_ICONS[i]}"
+    icon.padding_left=7
+    icon.padding_right=7
+    background.color=0x40ffffff
+    background.corner_radius=5
+    background.height=25
+    label.drawing=off
+    script="$PLUGIN_DIR/space.sh"
+    click_script="yabai -m space --focus $sid"
+  )
+  sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
 done
 
-# Group workspaces in a bracket
-sketchybar --add bracket spaces '/space\..*/' spacePaddingLeft spacePaddingRight \
-  --set spaces background.color=$BACKGROUND \
-  background.corner_radius=10 \
-  background.height=30
+##### Adding Left Items #####
+# We add some regular items to the left side of the bar, where
+# only the properties deviating from the current defaults need to be set
 
-# Add a separator
-sketchybar --add item seperator.r1 left \
-  --set seperator.r1 padding_left=4 padding_right=4 background.drawing=off icon.drawing=off label.drawing=off
-
-# Add window title item
-sketchybar --add item title q \
-  --set title \
-  script="$CONFIG_DIR/plugins/title.sh" \
-  padding_left=10 \
-  padding_right=30 \
-  background.color=$BACKGROUND \
-  background.border_width=1 \
-  background.corner_radius=10 \
-  background.height=30 \
-  icon.drawing=on \
-  icon.font="Hack Nerd Font:Bold:16.0" \
-  icon.color=$TEXT_GREY \
-  label.font="SF Pro:Semibold:16.0" \
-  label.drawing=on \
-  label.color=$TEXT_GREY \
-  click_script="./bin/menus -s 1" \
-  --subscribe title window_focus front_app_switched space_change title_change
-
-# Group window title
-sketchybar --add bracket window title \
-  --set window \
-  background.color=$BACKGROUND \
-  background.corner_radius=10 \
-  background.height=30
+sketchybar --add item chevron left \
+           --set chevron icon= label.drawing=off \
+           --add item front_app left \
+           --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
+           --subscribe front_app front_app_switched
 
 ##### Adding Right Items #####
+# In the same way as the left items we can add items to the right side.
+# Additional position (e.g. center) are available, see:
+# https://felixkratz.github.io/SketchyBar/config/items#adding-items-to-sketchybar
+
+# Some items refresh on a fixed cycle, e.g. the clock runs its script once
+# every 10s. Other items respond to events they subscribe to, e.g. the
+# volume.sh script is only executed once an actual change in system audio
+# volume is registered. More info about the event system can be found here:
+# https://felixkratz.github.io/SketchyBar/config/events
+
 sketchybar --add item clock right \
-  --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
-  \
-  --add item volume right \
-  --set volume script="$PLUGIN_DIR/volume.sh" \
-  --subscribe volume volume_change \
-  \
-  --add item battery right \
-  --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-  --subscribe battery system_woke power_source_change \
-  \
-  --add item wifi right \
-  --set wifi script="$PLUGIN_DIR/wifi.sh" label.font="SF Pro:Italic:16.0" label.y_offset=-3 \
-    popup.background.color=$BACKGROUND \
-    popup.background.border_width=2 \
-    popup.background.border_color=$TEXT_GREY \
-    popup.background.corner_radius=10 \
-    popup.y_offset=5 \
-  --subscribe wifi wifi_change mouse.entered mouse.exited \
-  \
-  --add item wifi.priv.addr popup.wifi \
-  --set wifi.priv.addr icon="󰌗" \
-  \
-  --add item wifi.pub.addr popup.wifi \
-  --set wifi.pub.addr icon="󰖟" \
-  \
-  --add item swap e \
-  --set swap update_freq=10 script="$PLUGIN_DIR/memswap.sh"\
-    icon="" \
-    label.font="SF Pro:Semibold:13.0" \
-    background.color=$BACKGROUND \
-    background.corner_radius=10 \
-    background.drawing=on \
-    background.height=30 \
-    background.padding_left=30 \
-    icon.padding_left=8 \
-    label.padding_right=8 \
-    click_script="open -a 'Activity Monitor'"
+           --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
+           --add item volume right \
+           --set volume script="$PLUGIN_DIR/volume.sh" \
+           --subscribe volume volume_change \
+           --add item battery right \
+           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery system_woke power_source_change
 
-sketchybar --add item microphone right \
-  --set microphone script="$PLUGIN_DIR/microphone.sh" update_freq=1 padding_left=4 padding_right=8 icon.padding_left=8 \
-  icon.padding_right=0 background.border_width=0 background.corner_radius=6 background.height=24 \
-  \
-  --add item screenrec right \
-  --set screenrec script="$PLUGIN_DIR/screenrec.sh" update_freq=1 padding_left=8 padding_right=4 icon.padding_left=8 \
-  icon.padding_right=0 background.border_width=0 background.corner_radius=6 background.height=24
-
-sketchybar --add bracket privacy microphone screenrec \
-  --set privacy background.color=$COLOR_BACKGROUND background.border_color=$COLOR_DEFAULT
-
-sketchybar --add item seperator.r3 right \
-  --set seperator.r3 padding_left=4 padding_right=4 background.drawing=off icon.drawing=off label.drawing=off
-
-#### Groups !!! ####
-sketchybar --add bracket rightItems clock volume battery wifi \
-  --set rightItems background.color=$BACKGROUND \
-  background.corner_radius=10 \
-  background.height=30
-
-# Add workspace update event
-sketchybar --add event workspace_update
-
-# Subscribe to workspace update events
-sketchybar --subscribe workspace_update script="$CONFIG_DIR/plugins/update_workspace_icons.sh"
-
-# Trigger the first workspace update
-sketchybar --trigger workspace_update
-
-# Subscribe all workspace items to specific events
-for sid in $WORKSPACES; do
-  sketchybar --subscribe space.$sid aerospace_workspace_change workspace_update
-done
-
-# Update items when windows or workspaces change
-sketchybar --subscribe window_change workspace_update
-sketchybar --subscribe window_focus workspace_update
-sketchybar --subscribe aerospace_workspace_change workspace_update
-
-##### Force all scripts to run the first time #####
+##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
-sketchybar --hotload true

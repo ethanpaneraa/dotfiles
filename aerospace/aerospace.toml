@@ -105,8 +105,8 @@ backspace = ['close-all-windows-but-current', 'mode main']
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'                      # Monitor sequence number from left to right. 1-based indexing
-2 = 'VG279'                     # Main monitor
-3 = 'LG HDR WFHD'               # Non-main monitor in case when there are only two monitors
+2 = 'main'                      # Main monitor
+3 = '3'                         # Non-main monitor in case when there are only two monitors
 4 = 'main'                      # Case insensitive regex substring
 5 = '^built-in retina display$' # Case insensitive regex match
 6 = 'main'

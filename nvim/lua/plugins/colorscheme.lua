@@ -2,7 +2,7 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    -- priority = 1000,
+    --- priority = 1000,
     config = function()
       require("rose-pine").setup({
         variant = "main", -- auto, main, moon, or dawn
@@ -34,7 +34,7 @@ return {
 
       -- HACK: set this on the color you want to be persistent
       -- when quit and reopening nvim
-      vim.cmd("colorscheme rose-pine")
+      --- vim.cmd("colorscheme rose-pine")
     end,
   },
   {
@@ -43,15 +43,30 @@ return {
     config = function()
       require("gruvbox").setup({
         contrast = "hard",
+        extend_background_behind_borders = false,
+        dim_inactive_windows = false,
         italic = {
           strings = false,
           emphasis = false,
           comments = false,
           operators = false,
           folds = false,
+          bold = true,
+        },
+        enable = {
+          terminal = false,
+          legacy_highlights = true,
+          migrations = true,
         },
       })
-      --- vim.cmd("colorscheme gruvbox")
+      vim.cmd("colorscheme gruvbox")
     end,
   },
+  vim.cmd([[
+  augroup TransparentBackground
+  autocmd!
+  autocmd ColorScheme * highlight Normal ctermbg=none guibg=none
+  autocmd ColorScheme * highlight NonText ctermbg=none guibg=none
+  augroup END
+]]),
 }

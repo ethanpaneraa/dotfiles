@@ -23,5 +23,10 @@
   "project_panel": {
     "dock": "right",
     "git_status": true
+  },
+  "experimental.theme_overrides": {
+    "background.appearance": "blurred",
+    "background": "#00000000",
+    "panel.background": "#00000000"
   }
 }
